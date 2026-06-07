@@ -265,3 +265,38 @@ def generate_sql(natural_language_query : str, area_id : int | None) -> str :
     )
 
     return (response.choices[0].message.content or "").strip()
+
+def transcribe_audio(audio_bytes:bytes,filename:str)->str:
+    import io 
+
+    transcription = client.audio.transcriptions.create(
+        model = "whisper-large-v3",
+        file = (filename,io.BytesIO(audio_bytes)),
+        response_format="text",
+        temperature=0.0,
+    )
+
+    raw_text = transcription.strip() if isinstance(transcription,str) else transcription.text.strip()
+
+    if not raw_text : 
+        return ""
+    
+    translation_response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "You are a translator. "
+                    "Translate the following text to English. "
+                    "If it is already in English, return it exactly as-is. "
+                    "Output only the translated text, nothing else."
+                ),
+            },
+            {"role": "user", "content": raw_text},
+        ],
+        temperature=0.0,
+        max_tokens=1024,
+    )
+
+    return (translation_response.choices[0].message.content or "").strip()
