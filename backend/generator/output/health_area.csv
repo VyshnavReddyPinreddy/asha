@@ -1,0 +1,501 @@
+area_id,area_name,area_type,mandal,district,anm_id
+1,Bhalswa Jahangir Pur Area 1,VILLAGE,Bhusawal,Jharkhand,1
+2,Kamarhati Area 2,COLONY,Shivpuri,Assam,2
+3,Kolhapur Area 3,WARD,Kurnool,Tripura,3
+4,Fatehpur Area 4,VILLAGE,Solapur,Jharkhand,4
+5,Uluberia Area 5,COLONY,Tinsukia,Sikkim,5
+6,Satara Area 6,VILLAGE,Kozhikode,Chhattisgarh,6
+7,Saharsa Area 7,VILLAGE,Adoni,Himachal Pradesh,7
+8,Ludhiana Area 8,VILLAGE,South Dumdum,Odisha,8
+9,Bareilly Area 9,VILLAGE,Tirunelveli,Sikkim,9
+10,Shivpuri Area 10,VILLAGE,Medininagar,Goa,10
+11,Jabalpur Area 11,VILLAGE,Rohtak,Uttarakhand,11
+12,Erode Area 12,VILLAGE,Bhilai,Bihar,12
+13,Kottayam Area 13,VILLAGE,Tirupati,Uttarakhand,13
+14,Hazaribagh Area 14,VILLAGE,Sultan Pur Majra,Goa,14
+15,Kanpur Area 15,VILLAGE,Gandhinagar,Meghalaya,15
+16,South Dumdum Area 16,VILLAGE,Khora ,Punjab,16
+17,Jodhpur Area 17,SLUM,Erode,Goa,17
+18,Ramagundam Area 18,VILLAGE,Naihati,Odisha,18
+19,Bhiwani Area 19,VILLAGE,Malegaon,Meghalaya,19
+20,Mau Area 20,VILLAGE,Buxar,Tamil Nadu,20
+21,Singrauli Area 21,WARD,Visakhapatnam,Mizoram,21
+22,Narasaraopet Area 22,VILLAGE,Buxar,Madhya Pradesh,22
+23,Machilipatnam Area 23,VILLAGE,Saharsa,Arunachal Pradesh,23
+24,Malda Area 24,VILLAGE,Bulandshahr,Sikkim,24
+25,Sagar Area 25,VILLAGE,Tenali,Meghalaya,25
+26,Phagwara Area 26,WARD,Dewas,Odisha,26
+27,Rourkela Area 27,VILLAGE,Dibrugarh,Nagaland,27
+28,Bhiwandi Area 28,VILLAGE,Nandyal,Chhattisgarh,28
+29,Bettiah Area 29,VILLAGE,Kozhikode,West Bengal,29
+30,Navi Mumbai Area 30,WARD,Shimoga,Arunachal Pradesh,30
+31,Ludhiana Area 31,WARD,Shahjahanpur,Maharashtra,31
+32,Nagaon Area 32,WARD,Bhiwandi,Haryana,32
+33,Tirupati Area 33,VILLAGE,Erode,Goa,33
+34,Raiganj Area 34,VILLAGE,Dhanbad,Nagaland,34
+35,Ballia Area 35,WARD,Kakinada,Arunachal Pradesh,35
+36,Buxar Area 36,VILLAGE,Sikar,Uttarakhand,36
+37,Amravati Area 37,COLONY,Darbhanga,Uttarakhand,37
+38,Jorhat Area 38,VILLAGE,Ozhukarai,Manipur,38
+39,Tadipatri Area 39,VILLAGE,Shivpuri,Nagaland,39
+40,Karaikudi Area 40,VILLAGE,Nashik,Tamil Nadu,40
+41,Kumbakonam Area 41,WARD,Kamarhati,Assam,41
+42,Unnao Area 42,VILLAGE,Satara,Haryana,42
+43,Bhubaneswar Area 43,VILLAGE,Srinagar,Kerala,43
+44,Rourkela Area 44,COLONY,Amritsar,Odisha,44
+45,Kharagpur Area 45,SLUM,Hosur,Uttar Pradesh,45
+46,Kamarhati Area 46,VILLAGE,Tiruppur,Madhya Pradesh,46
+47,Amaravati Area 47,VILLAGE,Dhanbad,Rajasthan,47
+48,Ujjain Area 48,SLUM,Tumkur,Sikkim,48
+49,Pallavaram Area 49,WARD,Navi Mumbai,Uttar Pradesh,49
+50,Anand Area 50,COLONY,Nagpur,Himachal Pradesh,50
+51,Jhansi Area 51,VILLAGE,Sagar,Rajasthan,51
+52,Bettiah Area 52,VILLAGE,South Dumdum,Mizoram,52
+53,Narasaraopet Area 53,VILLAGE,Darbhanga,Andhra Pradesh,53
+54,South Dumdum Area 54,VILLAGE,Pallavaram,Kerala,54
+55,Kadapa Area 55,VILLAGE,Tirupati,Karnataka,55
+56,Bhiwani Area 56,VILLAGE,Avadi,Uttar Pradesh,56
+57,Chandrapur Area 57,VILLAGE,Srikakulam,Gujarat,57
+58,Uluberia Area 58,VILLAGE,Hospet,Maharashtra,58
+59,Tadipatri Area 59,COLONY,Ghaziabad,Goa,59
+60,Ambattur Area 60,COLONY,Saharanpur,Karnataka,60
+61,Ambattur Area 61,VILLAGE,Vellore,Tripura,61
+62,Mathura Area 62,VILLAGE,Pali,Sikkim,62
+63,Surat Area 63,VILLAGE,Durg,Odisha,63
+64,Katihar Area 64,COLONY,Nagercoil,Bihar,64
+65,Kadapa Area 65,VILLAGE,Bongaigaon,Goa,65
+66,Mango Area 66,VILLAGE,Siwan,Uttarakhand,66
+67,Arrah Area 67,VILLAGE,Howrah,Tamil Nadu,67
+68,Pimpri-Chinchwad Area 68,WARD,Korba,Andhra Pradesh,68
+69,Berhampore Area 69,WARD,Nangloi Jat,Goa,69
+70,Hosur Area 70,VILLAGE,Bilaspur,Rajasthan,70
+71,Panipat Area 71,VILLAGE,Bhiwandi,Andhra Pradesh,71
+72,Mango Area 72,VILLAGE,Naihati,Mizoram,72
+73,Jorhat Area 73,VILLAGE,Shimla,Meghalaya,73
+74,Jamshedpur Area 74,VILLAGE,Bally,Maharashtra,74
+75,Thiruvananthapuram Area 75,VILLAGE,Bulandshahr,Chhattisgarh,75
+76,Uluberia Area 76,WARD,Karaikudi,Mizoram,76
+77,Tezpur Area 77,WARD,Deoghar,Gujarat,77
+78,Kumbakonam Area 78,COLONY,Adoni,Mizoram,78
+79,Tirupati Area 79,VILLAGE,Mahbubnagar,Mizoram,79
+80,Miryalaguda Area 80,VILLAGE,Bhiwandi,Goa,80
+81,Malda Area 81,VILLAGE,Nagpur,Arunachal Pradesh,81
+82,Nellore Area 82,VILLAGE,Nashik,Arunachal Pradesh,82
+83,Ramgarh Area 83,VILLAGE,Chandrapur,Karnataka,83
+84,Pudukkottai Area 84,VILLAGE,Faridabad,Uttarakhand,84
+85,Giridih Area 85,VILLAGE,Karimnagar,Haryana,85
+86,Sultan Pur Majra Area 86,VILLAGE,Bijapur,Madhya Pradesh,86
+87,Berhampore Area 87,VILLAGE,Singrauli,Tamil Nadu,87
+88,Kishanganj Area 88,WARD,Nandyal,Odisha,88
+89,Bardhaman Area 89,VILLAGE,Kakinada,Nagaland,89
+90,Dhanbad Area 90,WARD,Muzaffarnagar,Himachal Pradesh,90
+91,Vijayawada Area 91,VILLAGE,Gurgaon,Assam,91
+92,Aurangabad Area 92,VILLAGE,Kulti,Kerala,92
+93,Patna Area 93,VILLAGE,Imphal,Sikkim,93
+94,Bhiwandi Area 94,VILLAGE,Khandwa,Sikkim,94
+95,Eluru Area 95,VILLAGE,Anand,Uttarakhand,95
+96,Hapur Area 96,SLUM,Katihar,Madhya Pradesh,96
+97,Karimnagar Area 97,VILLAGE,Sagar,Tamil Nadu,97
+98,Ambattur Area 98,WARD,Satara,Manipur,98
+99,Hapur Area 99,VILLAGE,Morena,Manipur,99
+100,Bharatpur Area 100,WARD,Shimla,Arunachal Pradesh,100
+101,Dindigul Area 101,VILLAGE,Madhyamgram,Uttarakhand,1
+102,Ramagundam Area 102,VILLAGE,Etawah,Chhattisgarh,2
+103,Ballia Area 103,WARD,Sambalpur,Uttarakhand,3
+104,Nanded Area 104,VILLAGE,Delhi,Haryana,4
+105,Yamunanagar Area 105,VILLAGE,Ahmednagar,West Bengal,5
+106,Bidhannagar Area 106,COLONY,Narasaraopet,Tamil Nadu,6
+107,Burhanpur Area 107,COLONY,Motihari,Rajasthan,7
+108,Ghaziabad Area 108,VILLAGE,Burhanpur,Uttar Pradesh,8
+109,Berhampore Area 109,VILLAGE,Raurkela Industrial Township,Telangana,9
+110,Malegaon Area 110,VILLAGE,Malda,West Bengal,10
+111,Akola Area 111,VILLAGE,Amroha,Karnataka,11
+112,Navi Mumbai Area 112,VILLAGE,New Delhi,West Bengal,12
+113,Kolhapur Area 113,VILLAGE,Madanapalle,Goa,13
+114,Aligarh Area 114,VILLAGE,Vasai-Virar,Uttar Pradesh,14
+115,Bhubaneswar Area 115,WARD,Bhind,Uttar Pradesh,15
+116,Kadapa Area 116,VILLAGE,Machilipatnam,Karnataka,16
+117,Jalna Area 117,VILLAGE,Tinsukia,Mizoram,17
+118,Phusro Area 118,VILLAGE,Mysore,Uttar Pradesh,18
+119,Miryalaguda Area 119,COLONY,Hazaribagh,Haryana,19
+120,Buxar Area 120,VILLAGE,Eluru,Mizoram,20
+121,Mira-Bhayandar Area 121,VILLAGE,Bhagalpur,Punjab,21
+122,Malegaon Area 122,VILLAGE,Avadi,Maharashtra,22
+123,Narasaraopet Area 123,VILLAGE,Srinagar,Tripura,23
+124,Kota Area 124,COLONY,Udupi,Tripura,24
+125,Chinsurah Area 125,WARD,Deoghar,Gujarat,25
+126,Bokaro Area 126,SLUM,Tadepalligudem,Kerala,26
+127,Moradabad Area 127,VILLAGE,Thanjavur,Goa,27
+128,Madurai Area 128,VILLAGE,Jammu,Chhattisgarh,28
+129,Bulandshahr Area 129,VILLAGE,Bhopal,Bihar,29
+130,Guwahati Area 130,VILLAGE,Ludhiana,Bihar,30
+131,Mahbubnagar Area 131,VILLAGE,Siwan,Arunachal Pradesh,31
+132,Serampore Area 132,COLONY,Jodhpur,Tamil Nadu,32
+133,Nangloi Jat Area 133,WARD,Kota,Assam,33
+134,Ghaziabad Area 134,WARD,Parbhani,Goa,34
+135,Amravati Area 135,VILLAGE,Burhanpur,Gujarat,35
+136,Tadipatri Area 136,COLONY,Ozhukarai,Maharashtra,36
+137,Panchkula Area 137,VILLAGE,Guna,Punjab,37
+138,Belgaum Area 138,COLONY,Sangli-Miraj & Kupwad,Madhya Pradesh,38
+139,Tiruvottiyur Area 139,VILLAGE,Amritsar,Tripura,39
+140,Purnia Area 140,COLONY,Ballia,Mizoram,40
+141,Tiruppur Area 141,VILLAGE,Patna,Uttar Pradesh,41
+142,Jaunpur Area 142,VILLAGE,Kolhapur,Manipur,42
+143,Kamarhati Area 143,VILLAGE,Dehri,Uttarakhand,43
+144,Thrissur Area 144,WARD,Dhule,Uttarakhand,44
+145,Nanded Area 145,VILLAGE,Hindupur,Rajasthan,45
+146,Pallavaram Area 146,VILLAGE,Dehri,Andhra Pradesh,46
+147,Patna Area 147,SLUM,Avadi,Punjab,47
+148,Guwahati Area 148,WARD,Buxar,Bihar,48
+149,Siliguri Area 149,VILLAGE,Bhavnagar,Mizoram,49
+150,Jalgaon Area 150,VILLAGE,Amritsar,Punjab,50
+151,Ghaziabad Area 151,COLONY,Guwahati,Bihar,51
+152,Vadodara Area 152,VILLAGE,Bhusawal,Kerala,52
+153,Nizamabad Area 153,VILLAGE,Nagercoil,Assam,53
+154,Serampore Area 154,VILLAGE,Patiala,Nagaland,54
+155,Berhampur Area 155,VILLAGE,Rajpur Sonarpur,Gujarat,55
+156,Rajpur Sonarpur Area 156,VILLAGE,Varanasi,Chhattisgarh,56
+157,Tenali Area 157,VILLAGE,Chandrapur,Telangana,57
+158,Kollam Area 158,VILLAGE,Kottayam,Mizoram,58
+159,Kadapa Area 159,VILLAGE,Buxar,Madhya Pradesh,59
+160,Korba Area 160,WARD,Morbi,Karnataka,60
+161,Chittoor Area 161,VILLAGE,Adoni,Odisha,61
+162,Raipur Area 162,WARD,Machilipatnam,Uttar Pradesh,62
+163,Gopalpur Area 163,VILLAGE,Imphal,Goa,63
+164,Mehsana Area 164,COLONY,Junagadh,Uttarakhand,64
+165,Parbhani Area 165,COLONY,Sangli-Miraj & Kupwad,Sikkim,65
+166,Alappuzha Area 166,VILLAGE,Bhusawal,Bihar,66
+167,Chinsurah Area 167,WARD,Bhimavaram,Manipur,67
+168,Visakhapatnam Area 168,COLONY,Kakinada,Assam,68
+169,Barasat Area 169,WARD,Sikar,Uttar Pradesh,69
+170,Panipat Area 170,COLONY,Aligarh,Himachal Pradesh,70
+171,Begusarai Area 171,COLONY,Pimpri-Chinchwad,Kerala,71
+172,Kozhikode Area 172,VILLAGE,Malegaon,Gujarat,72
+173,Aurangabad Area 173,WARD,Sultan Pur Majra,Manipur,73
+174,Silchar Area 174,VILLAGE,Bhusawal,Tripura,74
+175,Gandhidham Area 175,VILLAGE,Muzaffarpur,Goa,75
+176,Buxar Area 176,WARD,Chennai,Bihar,76
+177,Dewas Area 177,VILLAGE,Imphal,Nagaland,77
+178,Parbhani Area 178,WARD,Patiala,Uttar Pradesh,78
+179,Farrukhabad Area 179,COLONY,Jalgaon,Karnataka,79
+180,Alappuzha Area 180,WARD,Ambattur,Punjab,80
+181,Jamnagar Area 181,SLUM,Ozhukarai,Haryana,81
+182,Bikaner Area 182,VILLAGE,Bulandshahr,Jharkhand,82
+183,Dehradun Area 183,VILLAGE,Ahmednagar,Gujarat,83
+184,Sonipat Area 184,VILLAGE,Muzaffarnagar,Tamil Nadu,84
+185,Tirupati Area 185,VILLAGE,Jehanabad,Punjab,85
+186,Guntakal Area 186,VILLAGE,Raipur,Karnataka,86
+187,Guntur Area 187,VILLAGE,Avadi,Andhra Pradesh,87
+188,Bally Area 188,COLONY,Durgapur,Maharashtra,88
+189,Miryalaguda Area 189,SLUM,Tezpur,Madhya Pradesh,89
+190,Gudivada Area 190,WARD,Raebareli,Odisha,90
+191,Tirunelveli Area 191,VILLAGE,Jalna,Gujarat,91
+192,Nagpur Area 192,VILLAGE,Hyderabad,Odisha,92
+193,Vasai-Virar Area 193,VILLAGE,Alwar,Assam,93
+194,Latur Area 194,SLUM,Korba,Maharashtra,94
+195,Jamshedpur Area 195,WARD,Hapur,Karnataka,95
+196,Ballia Area 196,VILLAGE,Udaipur,Bihar,96
+197,Srinagar Area 197,COLONY,Kakinada,Manipur,97
+198,Dibrugarh Area 198,VILLAGE,Nagercoil,Tamil Nadu,98
+199,Mirzapur Area 199,WARD,Katni,Maharashtra,99
+200,Korba Area 200,VILLAGE,Mysore,Tamil Nadu,100
+201,Giridih Area 201,WARD,Bally,Andhra Pradesh,1
+202,Jodhpur Area 202,COLONY,Raipur,Kerala,2
+203,Amaravati Area 203,VILLAGE,Bhiwani,Goa,3
+204,Tirupati Area 204,COLONY,Rajpur Sonarpur,Chhattisgarh,4
+205,Sagar Area 205,VILLAGE,Buxar,Punjab,5
+206,Akola Area 206,COLONY,Davanagere,Himachal Pradesh,6
+207,Gaya Area 207,VILLAGE,Rajpur Sonarpur,Karnataka,7
+208,Bhalswa Jahangir Pur Area 208,VILLAGE,Motihari,Telangana,8
+209,Gudivada Area 209,WARD,Munger,Goa,9
+210,Surat Area 210,VILLAGE,Firozabad,Bihar,10
+211,South Dumdum Area 211,WARD,Sambhal,Arunachal Pradesh,11
+212,Pondicherry Area 212,VILLAGE,Meerut,Uttarakhand,12
+213,Farrukhabad Area 213,VILLAGE,Ghaziabad,Odisha,13
+214,Phagwara Area 214,VILLAGE,Bhavnagar,Madhya Pradesh,14
+215,Nadiad Area 215,VILLAGE,Rajkot,Mizoram,15
+216,Bhiwandi Area 216,VILLAGE,Shimla,Arunachal Pradesh,16
+217,Jalna Area 217,VILLAGE,Bhagalpur,West Bengal,17
+218,Kalyan-Dombivli Area 218,WARD,Muzaffarpur,Meghalaya,18
+219,Karnal Area 219,SLUM,Mira-Bhayandar,Goa,19
+220,Firozabad Area 220,WARD,Shimla,Uttar Pradesh,20
+221,Sambalpur Area 221,VILLAGE,Sasaram,Haryana,21
+222,Dhanbad Area 222,VILLAGE,Dindigul,Madhya Pradesh,22
+223,Udupi Area 223,VILLAGE,South Dumdum,Assam,23
+224,Arrah Area 224,WARD,Panchkula,Chhattisgarh,24
+225,Raebareli Area 225,VILLAGE,Gandhinagar,Chhattisgarh,25
+226,Vadodara Area 226,VILLAGE,Mathura,Jharkhand,26
+227,Kishanganj Area 227,VILLAGE,Korba,Assam,27
+228,Dhanbad Area 228,SLUM,Jehanabad,Uttar Pradesh,28
+229,Ghaziabad Area 229,VILLAGE,Udupi,Goa,29
+230,Buxar Area 230,SLUM,Tadepalligudem,West Bengal,30
+231,Bellary Area 231,VILLAGE,Bhiwandi,Mizoram,31
+232,Gorakhpur Area 232,COLONY,Surendranagar Dudhrej,Nagaland,32
+233,Akola Area 233,VILLAGE,Nagaon,Uttarakhand,33
+234,Saharanpur Area 234,COLONY,Rajpur Sonarpur,Bihar,34
+235,Nagaon Area 235,WARD,Darbhanga,Telangana,35
+236,Berhampore Area 236,WARD,Yamunanagar,Madhya Pradesh,36
+237,Suryapet Area 237,VILLAGE,Kurnool,Nagaland,37
+238,Raurkela Industrial Township Area 238,WARD,Jehanabad,Jharkhand,38
+239,Vadodara Area 239,VILLAGE,Chennai,Manipur,39
+240,Panvel Area 240,VILLAGE,Kamarhati,Odisha,40
+241,Mathura Area 241,VILLAGE,Nandyal,Karnataka,41
+242,Nadiad Area 242,VILLAGE,Panihati,Karnataka,42
+243,Haldia Area 243,COLONY,Pimpri-Chinchwad,Goa,43
+244,Bhagalpur Area 244,COLONY,Munger,Mizoram,44
+245,Anantapuram Area 245,VILLAGE,Khandwa,Meghalaya,45
+246,Cuttack Area 246,COLONY,Dhule,Punjab,46
+247,Nagercoil Area 247,SLUM,Nellore,Manipur,47
+248,Sangli-Miraj & Kupwad Area 248,COLONY,Anand,Sikkim,48
+249,South Dumdum Area 249,SLUM,Jamalpur,Nagaland,49
+250,Srikakulam Area 250,VILLAGE,Ramagundam,Sikkim,50
+251,Jamalpur Area 251,VILLAGE,Warangal,Nagaland,51
+252,Ozhukarai Area 252,VILLAGE,Jalna,Arunachal Pradesh,52
+253,Shahjahanpur Area 253,WARD,Ghaziabad,Uttarakhand,53
+254,Bhind Area 254,VILLAGE,Tumkur,Sikkim,54
+255,Sambhal Area 255,WARD,Kalyan-Dombivli,Bihar,55
+256,Pallavaram Area 256,VILLAGE,Sagar,Meghalaya,56
+257,Uluberia Area 257,VILLAGE,Loni,Andhra Pradesh,57
+258,Anantapur Area 258,VILLAGE,Jehanabad,Sikkim,58
+259,Serampore Area 259,COLONY,Buxar,Meghalaya,59
+260,Pallavaram Area 260,VILLAGE,Mumbai,Telangana,60
+261,Khora  Area 261,VILLAGE,Ongole,Jharkhand,61
+262,Gandhinagar Area 262,VILLAGE,Gaya,Karnataka,62
+263,Etawah Area 263,SLUM,Bhavnagar,Chhattisgarh,63
+264,Nangloi Jat Area 264,VILLAGE,Raurkela Industrial Township,Meghalaya,64
+265,Panvel Area 265,VILLAGE,Karawal Nagar,Sikkim,65
+266,Vasai-Virar Area 266,COLONY,Alwar,Himachal Pradesh,66
+267,Jaipur Area 267,VILLAGE,Satara,Bihar,67
+268,Vellore Area 268,VILLAGE,Tumkur,Maharashtra,68
+269,Rewa Area 269,SLUM,Tenali,Arunachal Pradesh,69
+270,Ghaziabad Area 270,WARD,Yamunanagar,Punjab,70
+271,Bathinda Area 271,VILLAGE,Mau,West Bengal,71
+272,Munger Area 272,VILLAGE,Jamnagar,Karnataka,72
+273,Phagwara Area 273,WARD,Raebareli,Assam,73
+274,Alappuzha Area 274,VILLAGE,Visakhapatnam,Punjab,74
+275,Nagercoil Area 275,SLUM,Amritsar,Himachal Pradesh,75
+276,Gopalpur Area 276,COLONY,Raebareli,Haryana,76
+277,Sagar Area 277,SLUM,Pali,Maharashtra,77
+278,Motihari Area 278,VILLAGE,Thiruvananthapuram,Assam,78
+279,Lucknow Area 279,VILLAGE,Phagwara,Telangana,79
+280,Thiruvananthapuram Area 280,VILLAGE,Gandhinagar,Meghalaya,80
+281,Gandhinagar Area 281,VILLAGE,Malda,Goa,81
+282,Kollam Area 282,VILLAGE,Bhilwara,Bihar,82
+283,Kulti Area 283,VILLAGE,Malda,Karnataka,83
+284,Alappuzha Area 284,COLONY,Ujjain,Odisha,84
+285,Jamnagar Area 285,COLONY,Baranagar,Gujarat,85
+286,Kolhapur Area 286,VILLAGE,Guntakal,Assam,86
+287,Dehradun Area 287,COLONY,Ballia,Odisha,87
+288,Giridih Area 288,VILLAGE,Raichur,Sikkim,88
+289,Noida Area 289,VILLAGE,Amroha,Uttarakhand,89
+290,Etawah Area 290,WARD,Narasaraopet,Odisha,90
+291,Mirzapur Area 291,VILLAGE,Guntur,Tripura,91
+292,Sri Ganganagar Area 292,WARD,Tenali,Meghalaya,92
+293,Salem Area 293,VILLAGE,Sultan Pur Majra,Arunachal Pradesh,93
+294,Malegaon Area 294,VILLAGE,Raurkela Industrial Township,Maharashtra,94
+295,Bhilai Area 295,VILLAGE,South Dumdum,Mizoram,95
+296,Mysore Area 296,VILLAGE,Raichur,Kerala,96
+297,Rampur Area 297,WARD,Madhyamgram,Nagaland,97
+298,Siwan Area 298,SLUM,Hazaribagh,Telangana,98
+299,Karimnagar Area 299,VILLAGE,Imphal,Kerala,99
+300,Mira-Bhayandar Area 300,VILLAGE,Kadapa,Meghalaya,100
+301,Rajahmundry Area 301,VILLAGE,Nangloi Jat,Goa,1
+302,Berhampore Area 302,WARD,Aizawl,Jharkhand,2
+303,Etawah Area 303,COLONY,Kollam,Telangana,3
+304,Aizawl Area 304,WARD,Udaipur,Uttarakhand,4
+305,Thane Area 305,WARD,Raebareli,Andhra Pradesh,5
+306,Phagwara Area 306,WARD,Ajmer,Tripura,6
+307,Cuttack Area 307,SLUM,Khandwa,West Bengal,7
+308,Bhagalpur Area 308,COLONY,Berhampore,Madhya Pradesh,8
+309,Srinagar Area 309,VILLAGE,Kadapa,Kerala,9
+310,Srinagar Area 310,VILLAGE,Tadipatri,Sikkim,10
+311,Barasat Area 311,VILLAGE,Visakhapatnam,Mizoram,11
+312,Bihar Sharif Area 312,COLONY,Madurai,Himachal Pradesh,12
+313,Kozhikode Area 313,VILLAGE,Dhule,Haryana,13
+314,Bidhannagar Area 314,VILLAGE,Anand,Assam,14
+315,Orai Area 315,VILLAGE,Ramagundam,Nagaland,15
+316,Alwar Area 316,VILLAGE,Bhilwara,Meghalaya,16
+317,Hyderabad Area 317,VILLAGE,Gulbarga,Mizoram,17
+318,Purnia Area 318,VILLAGE,Ozhukarai,Bihar,18
+319,Asansol Area 319,VILLAGE,Ulhasnagar,Himachal Pradesh,19
+320,Berhampur Area 320,WARD,Hazaribagh,Goa,20
+321,Aligarh Area 321,COLONY,Ludhiana,Sikkim,21
+322,Bahraich Area 322,VILLAGE,Erode,Haryana,22
+323,Thanjavur Area 323,COLONY,Bhilwara,Manipur,23
+324,Tenali Area 324,WARD,Jaunpur,Rajasthan,24
+325,Burhanpur Area 325,VILLAGE,Haldia,Meghalaya,25
+326,Madurai Area 326,SLUM,Moradabad,Rajasthan,26
+327,Miryalaguda Area 327,VILLAGE,Surat,Tripura,27
+328,Tumkur Area 328,VILLAGE,Patiala,Gujarat,28
+329,Dhanbad Area 329,WARD,Panvel,Haryana,29
+330,Fatehpur Area 330,COLONY,Srikakulam,Manipur,30
+331,Mango Area 331,VILLAGE,Bathinda,Punjab,31
+332,Jammu Area 332,WARD,Kollam,Tripura,32
+333,Madanapalle Area 333,VILLAGE,Amaravati,Arunachal Pradesh,33
+334,Berhampur Area 334,VILLAGE,Jamalpur,Odisha,34
+335,Ramagundam Area 335,COLONY,Naihati,Gujarat,35
+336,Muzaffarnagar Area 336,COLONY,Pallavaram,Karnataka,36
+337,Tiruppur Area 337,VILLAGE,Bathinda,Goa,37
+338,Thoothukudi Area 338,SLUM,Aurangabad,Meghalaya,38
+339,Gwalior Area 339,VILLAGE,Patiala,Madhya Pradesh,39
+340,Korba Area 340,WARD,Karnal,Rajasthan,40
+341,Panvel Area 341,VILLAGE,Bhalswa Jahangir Pur,Sikkim,41
+342,Varanasi Area 342,WARD,Tirunelveli,Gujarat,42
+343,Karimnagar Area 343,VILLAGE,Thane,Uttar Pradesh,43
+344,Delhi Area 344,VILLAGE,Bellary,Himachal Pradesh,44
+345,Mira-Bhayandar Area 345,VILLAGE,Anantapuram,Bihar,45
+346,Bathinda Area 346,SLUM,Mirzapur,Jharkhand,46
+347,Erode Area 347,WARD,Faridabad,Uttarakhand,47
+348,Sri Ganganagar Area 348,WARD,Jamalpur,Odisha,48
+349,Ambattur Area 349,WARD,Bokaro,Punjab,49
+350,Haldia Area 350,VILLAGE,Guntakal,Madhya Pradesh,50
+351,Allahabad Area 351,VILLAGE,Bhilwara,Andhra Pradesh,51
+352,Karnal Area 352,WARD,Narasaraopet,Tamil Nadu,52
+353,Sri Ganganagar Area 353,VILLAGE,Durg,Arunachal Pradesh,53
+354,Bathinda Area 354,COLONY,Kottayam,Tripura,54
+355,Proddatur Area 355,VILLAGE,Kolhapur,Kerala,55
+356,Ghaziabad Area 356,WARD,Burhanpur,Maharashtra,56
+357,Rourkela Area 357,WARD,Madanapalle,Tripura,57
+358,Udaipur Area 358,WARD,Arrah,Madhya Pradesh,58
+359,Hapur Area 359,WARD,Udaipur,Karnataka,59
+360,Tenali Area 360,VILLAGE,Tezpur,Meghalaya,60
+361,Anantapuram Area 361,COLONY,Morbi,Punjab,61
+362,Amritsar Area 362,WARD,Bokaro,Arunachal Pradesh,62
+363,Gandhidham Area 363,VILLAGE,Mathura,Punjab,63
+364,Jodhpur Area 364,COLONY,Guntur,Sikkim,64
+365,Durgapur Area 365,COLONY,Katihar,Assam,65
+366,Imphal Area 366,COLONY,Panchkula,Rajasthan,66
+367,Darbhanga Area 367,WARD,Pali,Chhattisgarh,67
+368,Shivpuri Area 368,VILLAGE,Jalna,Uttarakhand,68
+369,Davanagere Area 369,VILLAGE,Kavali,Nagaland,69
+370,Mahbubnagar Area 370,VILLAGE,Vadodara,West Bengal,70
+371,Raichur Area 371,WARD,Raipur,Haryana,71
+372,Parbhani Area 372,WARD,Bongaigaon,Sikkim,72
+373,Giridih Area 373,VILLAGE,Bhavnagar,Telangana,73
+374,Ichalkaranji Area 374,WARD,Jodhpur,Mizoram,74
+375,Hubli–Dharwad Area 375,SLUM,Tadipatri,Rajasthan,75
+376,Ujjain Area 376,COLONY,Bathinda,Mizoram,76
+377,Berhampore Area 377,VILLAGE,Khandwa,Uttar Pradesh,77
+378,Srinagar Area 378,VILLAGE,Agartala,Tamil Nadu,78
+379,Raebareli Area 379,COLONY,Durgapur,Rajasthan,79
+380,Saharsa Area 380,VILLAGE,Barasat,Odisha,80
+381,Thrissur Area 381,VILLAGE,Varanasi,Madhya Pradesh,81
+382,Maheshtala Area 382,VILLAGE,Kharagpur,Kerala,82
+383,Bhilwara Area 383,COLONY,Khammam,Himachal Pradesh,83
+384,Sagar Area 384,SLUM,Pondicherry,Odisha,84
+385,Chandigarh Area 385,WARD,Aligarh,Maharashtra,85
+386,Dewas Area 386,WARD,Kumbakonam,Uttarakhand,86
+387,Ongole Area 387,VILLAGE,Bhind,Telangana,87
+388,Noida Area 388,VILLAGE,Nellore,Uttarakhand,88
+389,Katni Area 389,VILLAGE,Hospet,Karnataka,89
+390,Rampur Area 390,VILLAGE,Ambattur,Madhya Pradesh,90
+391,Sonipat Area 391,SLUM,Agartala,Arunachal Pradesh,91
+392,Amritsar Area 392,VILLAGE,Kakinada,West Bengal,92
+393,Malda Area 393,VILLAGE,Agartala,Madhya Pradesh,93
+394,Jamshedpur Area 394,WARD,Udaipur,Jharkhand,94
+395,Thrissur Area 395,WARD,Madanapalle,Chhattisgarh,95
+396,Thanjavur Area 396,VILLAGE,Jehanabad,Manipur,96
+397,Chandigarh Area 397,VILLAGE,Singrauli,Madhya Pradesh,97
+398,Jalandhar Area 398,VILLAGE,Cuttack,Assam,98
+399,Kolkata Area 399,VILLAGE,Secunderabad,Goa,99
+400,Karawal Nagar Area 400,WARD,Agra,Mizoram,100
+401,Bhopal Area 401,VILLAGE,Agartala,Maharashtra,1
+402,Bongaigaon Area 402,VILLAGE,Anantapuram,Kerala,2
+403,Korba Area 403,VILLAGE,Avadi,Himachal Pradesh,3
+404,Bardhaman Area 404,VILLAGE,Nanded,Rajasthan,4
+405,Bettiah Area 405,WARD,Mau,Maharashtra,5
+406,Ozhukarai Area 406,VILLAGE,Bhubaneswar,Uttarakhand,6
+407,Phusro Area 407,VILLAGE,Tadepalligudem,Tamil Nadu,7
+408,Tinsukia Area 408,VILLAGE,Kumbakonam,Telangana,8
+409,Bihar Sharif Area 409,SLUM,Kanpur,Uttar Pradesh,9
+410,Phusro Area 410,VILLAGE,Katni,Jharkhand,10
+411,Burhanpur Area 411,COLONY,Nagpur,Punjab,11
+412,Kollam Area 412,WARD,Eluru,Telangana,12
+413,Kharagpur Area 413,WARD,Durg,Uttarakhand,13
+414,Karaikudi Area 414,VILLAGE,Nizamabad,Haryana,14
+415,Ahmednagar Area 415,VILLAGE,Surat,West Bengal,15
+416,Ghaziabad Area 416,WARD,North Dumdum,Andhra Pradesh,16
+417,Orai Area 417,VILLAGE,Tadepalligudem,Haryana,17
+418,Vadodara Area 418,COLONY,Rourkela,Odisha,18
+419,Singrauli Area 419,VILLAGE,Alwar,Andhra Pradesh,19
+420,Maheshtala Area 420,VILLAGE,Lucknow,Nagaland,20
+421,Tiruppur Area 421,WARD,Sirsa,Punjab,21
+422,Bhatpara Area 422,WARD,Proddatur,Karnataka,22
+423,Nangloi Jat Area 423,VILLAGE,Ichalkaranji,Bihar,23
+424,Bhopal Area 424,VILLAGE,Suryapet,Haryana,24
+425,Ahmedabad Area 425,WARD,Agra,Sikkim,25
+426,Amaravati Area 426,VILLAGE,Jalandhar,Jharkhand,26
+427,Kurnool Area 427,VILLAGE,Serampore,Manipur,27
+428,Belgaum Area 428,SLUM,Dibrugarh,West Bengal,28
+429,Khandwa Area 429,VILLAGE,Mehsana,Jharkhand,29
+430,Chinsurah Area 430,VILLAGE,Tiruppur,Goa,30
+431,Bettiah Area 431,VILLAGE,Miryalaguda,Tamil Nadu,31
+432,Raurkela Industrial Township Area 432,WARD,Etawah,Jharkhand,32
+433,Srinagar Area 433,WARD,Haldia,Himachal Pradesh,33
+434,Thanjavur Area 434,VILLAGE,Bhiwandi,Maharashtra,34
+435,Ujjain Area 435,WARD,Ambala,Punjab,35
+436,Hindupur Area 436,COLONY,Kulti,Jharkhand,36
+437,Bokaro Area 437,VILLAGE,Hapur,Punjab,37
+438,Kadapa Area 438,VILLAGE,Farrukhabad,Bihar,38
+439,Khammam Area 439,COLONY,Sirsa,Madhya Pradesh,39
+440,Naihati Area 440,VILLAGE,Pune,Gujarat,40
+441,Hazaribagh Area 441,VILLAGE,Asansol,Odisha,41
+442,Rohtak Area 442,VILLAGE,Farrukhabad,Maharashtra,42
+443,Adoni Area 443,VILLAGE,Guna,Meghalaya,43
+444,Allahabad Area 444,WARD,Salem,Mizoram,44
+445,Jodhpur Area 445,VILLAGE,Bardhaman,Andhra Pradesh,45
+446,Giridih Area 446,VILLAGE,Thoothukudi,Meghalaya,46
+447,Solapur Area 447,COLONY,Mathura,Chhattisgarh,47
+448,Imphal Area 448,VILLAGE,Rohtak,Punjab,48
+449,Gangtok Area 449,COLONY,Naihati,West Bengal,49
+450,Bangalore Area 450,VILLAGE,Dewas,Punjab,50
+451,Durg Area 451,VILLAGE,Mehsana,Goa,51
+452,Miryalaguda Area 452,COLONY,Hindupur,Jharkhand,52
+453,Jaipur Area 453,COLONY,Panchkula,Goa,53
+454,Vasai-Virar Area 454,VILLAGE,Eluru,Jharkhand,54
+455,Jaipur Area 455,WARD,Nagercoil,Nagaland,55
+456,Gandhidham Area 456,VILLAGE,Chandrapur,Goa,56
+457,Chapra Area 457,VILLAGE,Mahbubnagar,Haryana,57
+458,Panvel Area 458,VILLAGE,Raurkela Industrial Township,Sikkim,58
+459,Guntakal Area 459,VILLAGE,Tadipatri,Rajasthan,59
+460,Gorakhpur Area 460,COLONY,Tiruppur,Odisha,60
+461,Chennai Area 461,SLUM,Katni,Sikkim,61
+462,Tadipatri Area 462,VILLAGE,Kirari Suleman Nagar,Chhattisgarh,62
+463,Bikaner Area 463,WARD,Nashik,Jharkhand,63
+464,Sirsa Area 464,WARD,Agra,Goa,64
+465,Chinsurah Area 465,WARD,Gandhidham,West Bengal,65
+466,Meerut Area 466,COLONY,Motihari,West Bengal,66
+467,Pondicherry Area 467,VILLAGE,Etawah,Andhra Pradesh,67
+468,Phagwara Area 468,VILLAGE,Ulhasnagar,Madhya Pradesh,68
+469,Tadepalligudem Area 469,VILLAGE,Nashik,Telangana,69
+470,Tenali Area 470,WARD,Rajahmundry,Bihar,70
+471,Panvel Area 471,VILLAGE,Hubli–Dharwad,West Bengal,71
+472,Bally Area 472,VILLAGE,Tirupati,Mizoram,72
+473,Gaya Area 473,VILLAGE,Gulbarga,Maharashtra,73
+474,Panchkula Area 474,COLONY,Patna,Telangana,74
+475,Gorakhpur Area 475,VILLAGE,Karnal,Mizoram,75
+476,Amravati Area 476,VILLAGE,Bharatpur,Goa,76
+477,Tirupati Area 477,COLONY,Barasat,Sikkim,77
+478,Moradabad Area 478,COLONY,Narasaraopet,Sikkim,78
+479,Anantapuram Area 479,WARD,Burhanpur,Sikkim,79
+480,Anand Area 480,VILLAGE,Panvel,Arunachal Pradesh,80
+481,Dhule Area 481,VILLAGE,Durg,Tripura,81
+482,Narasaraopet Area 482,VILLAGE,Avadi,Rajasthan,82
+483,Bareilly Area 483,WARD,Hospet,Chhattisgarh,83
+484,Gopalpur Area 484,VILLAGE,Pondicherry,Uttar Pradesh,84
+485,Howrah Area 485,VILLAGE,Nellore,Assam,85
+486,Narasaraopet Area 486,WARD,Dharmavaram,Meghalaya,86
+487,Kulti Area 487,VILLAGE,Panihati,Goa,87
+488,Sambhal Area 488,VILLAGE,Bijapur,Odisha,88
+489,Haldia Area 489,VILLAGE,Farrukhabad,Haryana,89
+490,Aizawl Area 490,VILLAGE,Udaipur,Maharashtra,90
+491,Noida Area 491,SLUM,Akola,Tamil Nadu,91
+492,Sambalpur Area 492,VILLAGE,Agra,West Bengal,92
+493,Rewa Area 493,VILLAGE,Tezpur,Kerala,93
+494,Bijapur Area 494,WARD,Dharmavaram,Kerala,94
+495,Muzaffarpur Area 495,VILLAGE,Raichur,Sikkim,95
+496,Muzaffarpur Area 496,VILLAGE,Hubli–Dharwad,Jharkhand,96
+497,Arrah Area 497,VILLAGE,Kavali,Kerala,97
+498,Rajpur Sonarpur Area 498,VILLAGE,Phusro,Rajasthan,98
+499,Aligarh Area 499,WARD,Dehradun,Telangana,99
+500,Chandrapur Area 500,VILLAGE,Kollam,Punjab,100
