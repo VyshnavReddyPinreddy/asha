@@ -1,0 +1,23 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiosmtplib>=5.1.1",
+    "alembic>=1.18.4",
+    "asyncpg>=0.31.0",
+    "bcrypt==3.2.2",
+    "faker>=40.21.0",
+    "fastapi>=0.136.3",
+    "fastapi-mail>=1.6.4",
+    "groq>=1.4.0",
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "passlib[bcrypt]>=1.7.4",
+    "pydantic-settings>=2.14.1",
+    "pyjwt>=2.13.0",
+    "sqlalchemy>=2.0.50",
+    "uvicorn>=0.48.0",
+]
