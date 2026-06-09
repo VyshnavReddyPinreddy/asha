@@ -1,4 +1,5 @@
 import { Activity } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -17,9 +18,13 @@ function Navbar() {
           <a href="#mission">Mission</a>
         </div>
 
-        <button className="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-xl transition">
+        <Link
+          to="/login"
+          className="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-xl transition"
+        >
           Login
-        </button>
+        </Link>
+
       </div>
     </nav>
   );
