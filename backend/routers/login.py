@@ -1,4 +1,4 @@
-from fastapi import APIRouter,Depends,HTTPException,status
+from fastapi import APIRouter,Depends,HTTPException,status,Response
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text 
@@ -15,7 +15,8 @@ class LoginRequest(BaseModel):
     password : str 
     
 @router.post('/login')
-async def login(payload: LoginRequest,db:AsyncSession=Depends(get_db)):
+
+async def login(payload: LoginRequest,response:Response,db:AsyncSession=Depends(get_db)):
     query = text("""
         SELECT user_id, username, password_hash, role, asha_id, anm_id 
         FROM user_account 
@@ -41,10 +42,27 @@ async def login(payload: LoginRequest,db:AsyncSession=Depends(get_db)):
 
     access_token = create_access_token(data=token_data)
 
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        httponly=True,
+        secure=False,     # True in production HTTPS
+        samesite="lax",
+        max_age=60 * 60 * 24
+    )
     return {
-        "access_token": access_token,
-        "token_type": "bearer",
+        "message": "Login successful",
         "role": user["role"],
         "username": user["username"]
     }
     
+@router.post("/logout")
+async def logout(response: Response):
+
+    response.delete_cookie(
+        key="access_token"
+    )
+
+    return {
+        "message": "Logged out"
+    }

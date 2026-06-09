@@ -3,15 +3,12 @@ from passlib.context import CryptContext
 import jwt
 from jwt.exceptions import InvalidTokenError
 
-from fastapi import Depends,HTTPException,status 
-from fastapi.security import HTTPBearer,HTTPAuthorizationCredentials
+from fastapi import HTTPException,status,Request
 
 from core.config import settings 
 import random 
 
 pwd_context = CryptContext(schemes=["bcrypt"],deprecated="auto")
-
-bearer_scheme = HTTPBearer()
 
 def verify_password(plain_password:str,hashed_password:str) -> bool : 
     return pwd_context.verify(plain_password,hashed_password)
@@ -29,8 +26,14 @@ def hash_password(password:str)->str:
 def generate_otp()->str:
     return str(random.randint(100000,999999))
 
-def get_current_user(credentials : HTTPAuthorizationCredentials = Depends(bearer_scheme),) -> dict : 
-    token = credentials.credentials
+def get_current_user(request:Request): 
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(
+            status_code=401,
+            detail="Not authenticated"
+        )
+    
     try : 
         payload = jwt.decode(
             token,
@@ -38,9 +41,9 @@ def get_current_user(credentials : HTTPAuthorizationCredentials = Depends(bearer
             algorithms = [settings.JWT_ALGORITHM],
         )
         return payload 
+    
     except InvalidTokenError:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail = "Invalid or expired token",
-            headers={"WWW-Authenticate":"Bearer"},
         )
