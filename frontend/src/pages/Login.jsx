@@ -53,7 +53,7 @@ function Login() {
 
       toast.success("Login Successful");
 
-      navigate("/dashboard");
+      navigate("/assistant");
     } catch (error) {
       toast.error(
         error.response?.data?.detail ||
