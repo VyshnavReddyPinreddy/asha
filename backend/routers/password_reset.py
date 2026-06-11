@@ -81,6 +81,12 @@ async def reset_password(
     db: AsyncSession = Depends(get_db)
 ):
 
+    if len(payload.new_password) < 8:
+        raise HTTPException(
+            400,
+            "Password must be at least 8 characters long"
+        )
+
     result = await db.execute(
         text("""
         SELECT user_id,
