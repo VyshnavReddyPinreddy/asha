@@ -174,3 +174,22 @@ CREATE TABLE user_account (
     reset_otp VARCHAR(6),
     otp_expiry TIMESTAMPTZ
 );
+
+-- 18. Favorite Queries Table
+CREATE TABLE IF NOT EXISTS favorite_queries (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    asha_id INT NOT NULL,
+    query_name VARCHAR(255) NOT NULL,
+    generated_sql TEXT NOT NULL,
+    is_system BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT unique_query UNIQUE (asha_id, query_name)
+);
+
+-- Insert 5 system queries (asha_id = 0 reserved for system)
+INSERT INTO favorite_queries (query_name, generated_sql, is_system, asha_id) VALUES 
+('Pregnant women in my area', 'SELECT p.person_id, p.first_name, p.last_name, p.phone_number, pr.lmp_date, pr.expected_delivery_date, pr.risk_category FROM pregnancy pr JOIN person p ON pr.mother_id = p.person_id JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND pr.pregnancy_status = ''ONGOING'';', TRUE, 0), 
+('Vaccination pending - Children', 'SELECT p.person_id, p.first_name, p.last_name, p.date_of_birth FROM person p JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND p.status = ''ALIVE'' AND EXTRACT(YEAR FROM AGE(CURRENT_DATE, p.date_of_birth)) < 5 AND p.person_id NOT IN (SELECT DISTINCT person_id FROM vaccination_record);', TRUE, 0), 
+('High-risk pregnancies', 'SELECT p.first_name, p.last_name, p.phone_number, pr.lmp_date, pr.expected_delivery_date, pr.risk_category FROM pregnancy pr JOIN person p ON pr.mother_id = p.person_id JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND pr.risk_category = ''HIGH_RISK'' AND pr.pregnancy_status = ''ONGOING'';', TRUE, 0), 
+('Recent births (last 30 days)', 'SELECT p.person_id, p.first_name, p.last_name, br.birth_weight_kg, br.delivery_type, br.birth_id FROM birth_record br JOIN person p ON br.child_id = p.person_id JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND br.birth_id IN (SELECT birth_id FROM birth_record WHERE CURRENT_DATE - INTERVAL ''30 days'' <= CURRENT_DATE);', TRUE, 0), 
+('Children under 5 years', 'SELECT p.person_id, p.first_name, p.last_name, p.date_of_birth, p.gender FROM person p JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND p.status = ''ALIVE'' AND EXTRACT(YEAR FROM AGE(CURRENT_DATE, p.date_of_birth)) < 5;', TRUE, 0);
