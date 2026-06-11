@@ -3,6 +3,8 @@ import { Eye, EyeOff, Activity } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 import toast from "react-hot-toast";
+import { ArrowLeft } from "lucide-react";
+
 
 function Login() {
   const navigate = useNavigate();
@@ -34,23 +36,6 @@ function Login() {
         password: formData.password,
       });
 
-      const data = response.data;
-
-      localStorage.setItem(
-        "token",
-        data.access_token
-      );
-
-      localStorage.setItem(
-        "role",
-        data.role
-      );
-
-      localStorage.setItem(
-        "username",
-        data.username
-      );
-
       toast.success("Login Successful");
 
       navigate("/assistant");
@@ -67,6 +52,29 @@ function Login() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-6">
 
+       <button
+        type="button"
+        onClick={() => navigate("/")}
+        className="
+          absolute
+          top-6
+          right-6
+          flex
+          items-center
+          gap-2
+          px-4
+          py-2
+          rounded-xl
+          border
+          border-sky-200
+          text-sky-600
+          hover:bg-sky-50
+          transition
+        "
+      >
+        Back to Home
+      </button>
+
       <div className="w-full max-w-md">
 
         <div className="text-center mb-8">
@@ -77,6 +85,8 @@ function Login() {
               className="text-sky-500"
             />
           </div>
+
+          
 
           <h1 className="text-3xl font-bold text-gray-900">
             Welcome Back
