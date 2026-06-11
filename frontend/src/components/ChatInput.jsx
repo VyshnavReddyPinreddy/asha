@@ -6,15 +6,15 @@ import {
 
 import { useState } from "react";
 
-function ChatInput({ onSubmit }) {
+function ChatInput({ onSubmit, disabled }) {
 
   const [query, setQuery] = useState("");
 
   const send = () => {
 
-    if (!query.trim()) return;
+    if (!query.trim() || disabled) return;
 
-    onSubmit(query);
+    onSubmit(query, false);
 
     setQuery("");
   };
@@ -32,7 +32,7 @@ function ChatInput({ onSubmit }) {
         mx-auto
       ">
 
-        <div className="
+        <div className={`
           rounded-3xl
           border
           border-sky-200
@@ -42,7 +42,8 @@ function ChatInput({ onSubmit }) {
           items-center
           gap-4
           shadow-sm
-        ">
+          ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
+        `}>
 
           <Plus
             size={20}
@@ -55,12 +56,14 @@ function ChatInput({ onSubmit }) {
               setQuery(e.target.value)
             }
             onKeyDown={(e) =>
-              e.key === "Enter" && send()
+              e.key === "Enter" && !disabled && send()
             }
             placeholder="Ask anything"
+            disabled={disabled}
             className="
               flex-1
               outline-none
+              disabled:bg-gray-50
             "
           />
 
@@ -71,6 +74,7 @@ function ChatInput({ onSubmit }) {
 
           <button
             onClick={send}
+            disabled={disabled}
             className="
               h-9
               w-9
@@ -78,6 +82,8 @@ function ChatInput({ onSubmit }) {
               bg-sky-500
               text-white
               px-2
+              disabled:opacity-50
+              disabled:cursor-not-allowed
             "
           >
             <ArrowUp size={19} />
