@@ -17,18 +17,22 @@ function ResultsTable({ rows }) {
 
   return (
     <div className="
-      overflow-auto
       bg-white
       rounded-xl
       border
       border-sky-100
+      max-h-96
+      overflow-auto
     ">
 
-      <table className="w-full">
+      <table className="
+        w-full
+        text-sm
+      ">
 
-        <thead>
+        <thead className="sticky top-0 bg-sky-50">
 
-          <tr className="bg-sky-50">
+          <tr>
 
             {columns.map((col) => (
               <th
@@ -37,6 +41,8 @@ function ResultsTable({ rows }) {
                   px-4
                   py-3
                   text-left
+                  font-semibold
+                  whitespace-nowrap
                 "
               >
                 {col}
@@ -55,6 +61,7 @@ function ResultsTable({ rows }) {
               className="
                 border-t
                 border-sky-100
+                hover:bg-sky-50
               "
             >
 
@@ -64,7 +71,11 @@ function ResultsTable({ rows }) {
                   className="
                     px-4
                     py-3
+                    whitespace-nowrap
+                    overflow-hidden
+                    text-ellipsis
                   "
+                  title={String(row[col])}
                 >
                   {String(row[col])}
                 </td>
