@@ -204,9 +204,9 @@ Convert the user's natural-language question into a single, valid PostgreSQL SEL
      that answers the intent using available columns.
  
 6. AGGREGATIONS & SAFETY
-   - Use LIMIT 200 by default on non-aggregated queries to prevent runaway results.
    - Use proper JOINs; never use implicit cross joins.
    - Cast types explicitly where needed (e.g. EXTRACT, DATE_PART).
+   - For age calculations, use EXTRACT(YEAR FROM AGE(DATE '...',date_of_birth)) to get age in years as integer, not intervals.
  
 ## EXAMPLES
  
@@ -217,8 +217,7 @@ SQL: SELECT p.person_id, p.first_name, p.last_name, p.phone_number,
      JOIN family f ON p.family_id = f.family_id
      JOIN pregnancy pr ON pr.mother_id = p.person_id
      WHERE f.area_id = {area_id}
-       AND pr.pregnancy_status = 'ONGOING'
-     LIMIT 200;
+       AND pr.pregnancy_status = 'ONGOING';
  
 User: "How many children under 5 are unvaccinated?"
 SQL: SELECT COUNT(DISTINCT p.person_id) AS unvaccinated_children
@@ -239,8 +238,7 @@ SQL: SELECT p.first_name, p.last_name, p.phone_number,
      JOIN family f ON p.family_id = f.family_id
      WHERE f.area_id = {area_id}
        AND pr.risk_category = 'HIGH_RISK'
-       AND pr.pregnancy_status = 'ONGOING'
-     LIMIT 200;
+       AND pr.pregnancy_status = 'ONGOING';
 """
 
 def generate_sql(natural_language_query : str, area_id : int | None) -> str : 
