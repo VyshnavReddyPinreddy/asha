@@ -1,9 +1,10 @@
-import re 
+import re
 import logging
+import json
 
 from fastapi import APIRouter,Depends,HTTPException,status
 from pydantic import BaseModel
-from sqlalchemy import text 
+from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.llm import ask_llm,generate_sql
@@ -11,6 +12,36 @@ from core.database import get_db
 from core.security import get_current_user
 
 logger = logging.getLogger(__name__)
+
+def _convert_age_format(value: str) -> str:
+    """Convert PostgreSQL interval format (P10Y3D) to readable format (10 years, 3 days)"""
+    if not isinstance(value, str) or not value.startswith('P'):
+        return value
+
+    pattern = r'P(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)D)?'
+    match = re.match(pattern, value)
+    if not match:
+        return value
+
+    years, months, days = match.groups()
+    parts = []
+
+    if years:
+        parts.append(f"{years} year{'s' if int(years) != 1 else ''}")
+    if months:
+        parts.append(f"{months} month{'s' if int(months) != 1 else ''}")
+    if days:
+        parts.append(f"{days} day{'s' if int(days) != 1 else ''}")
+
+    return ", ".join(parts) if parts else value
+
+def _convert_results_age(results: list[dict]) -> list[dict]:
+    """Convert age values in results from ISO 8601 interval format to readable format"""
+    for row in results:
+        for key, value in row.items():
+            if isinstance(value, str) and value.startswith('P'):
+                row[key] = _convert_age_format(value)
+    return results
 
 router = APIRouter(
     prefix="/chat",
@@ -147,11 +178,12 @@ async def nl_to_sql_query(
                     ),
                 )
             
-        try : 
+        try :
             result = await db.execute(text(generated_sql))
-            rows = result.mappings().all() 
+            rows = result.mappings().all()
             results = [dict(row) for row in rows]
-        except Exception as e : 
+            results = _convert_results_age(results)
+        except Exception as e :
             logger.error("SQL execution error: %s | SQL: %s", e, generated_sql)
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
