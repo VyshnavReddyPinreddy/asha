@@ -4,6 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text 
 from core.database import get_db 
 from core.security import verify_password,create_access_token
+from core.security import get_current_user
 
 router = APIRouter(
     prefix="/auth",
@@ -65,4 +66,14 @@ async def logout(response: Response):
 
     return {
         "message": "Logged out"
+    }
+
+@router.get("/me")
+async def me(
+    current_user: dict = Depends(get_current_user)
+):
+    return {
+        "user_id": current_user["user_id"],
+        "username": current_user["username"],
+        "role": current_user["role"]
     }
