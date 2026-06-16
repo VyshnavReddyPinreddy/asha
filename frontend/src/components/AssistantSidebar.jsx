@@ -162,6 +162,7 @@ const AssistantSidebar = forwardRef(({ onFavoriteClick, currentFavoriteId }, ref
             hover:bg-sky-200
             transition
             text-sky-600
+            hover:cursor-pointer
           "
         >
           <X size={24} />
@@ -246,6 +247,7 @@ const AssistantSidebar = forwardRef(({ onFavoriteClick, currentFavoriteId }, ref
             hover:bg-red-100
             transition
             font-medium
+            hover:cursor-pointer
           "
         >
           <LogOut size={18} />
