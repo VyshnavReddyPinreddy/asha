@@ -4,6 +4,7 @@ import AssistantSidebar from "../components/AssistantSidebar";
 import ChatInput from "../components/ChatInput";
 import UserMessage from "../components/UserMessage";
 import AssistantResponse from "../components/AssistantResponse";
+import ErrorResponse from "../components/ErrorResponse";
 import api from "../services/api";
 import toast from "react-hot-toast";
 
@@ -50,12 +51,145 @@ function Assistant() {
         assistantMessage,
       ]);
     } catch (error) {
-      toast.error(
-        error.response?.data?.detail ||
-        "Something went wrong"
+      const errorData = {
+        type: "error",
+        error: {
+          statusCode: error.response?.status || "Unknown",
+          message: error.response?.data?.detail || "Query execution failed",
+          details: error.response?.data?.detail || error.message || "",
+        },
+      };
+      setMessages((prev) => [...prev, errorData]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const submitImageQuery = async (imageFile) => {
+    const userMessage = {
+      type: "user",
+      query: "Processing image query...",
+    };
+
+    setMessages([userMessage]);
+    setLoading(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("image", imageFile, imageFile.name);
+
+      const response = await api.post(
+        "/chat/image-query",
+        formData,
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
 
-      console.error(error);
+      const assistantMessage = {
+        type: "assistant",
+        data: {
+          natual_language_query: response.data.extracted_text,
+          generated_sql: response.data.generated_sql,
+          row_count: response.data.row_count,
+          results: response.data.results,
+        },
+        favoriteId: null,
+      };
+
+      setMessages((prev) => {
+        const updated = [...prev];
+        updated[0] = {
+          type: "user",
+          query: response.data.extracted_text,
+        };
+        return [...updated, assistantMessage];
+      });
+    } catch (error) {
+      const errorData = {
+        type: "error",
+        error: {
+          statusCode: error.response?.status || "Unknown",
+          message: error.response?.data?.detail || "Image query failed",
+          details: error.response?.data?.detail || error.message || "",
+        },
+      };
+      setMessages((prev) => {
+        const updated = [...prev];
+        updated[0] = {
+          type: "user",
+          query: "Image query",
+        };
+        return [...updated, errorData];
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const submitVoiceQuery = async (audioBlob) => {
+    const userMessage = {
+      type: "user",
+      query: "Recording voice query...",
+    };
+
+    setMessages([userMessage]);
+    setLoading(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("audio", audioBlob, "audio.webm");
+
+      const response = await api.post(
+        "/chat/voice-query",
+        formData,
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      const assistantMessage = {
+        type: "assistant",
+        data: {
+          natual_language_query: response.data.transcribed_text,
+          generated_sql: response.data.generated_sql,
+          row_count: response.data.row_count,
+          results: response.data.results,
+        },
+        favoriteId: null,
+      };
+
+      setMessages((prev) => {
+        const updated = [...prev];
+        updated[0] = {
+          type: "user",
+          query: response.data.transcribed_text,
+        };
+        return [...updated, assistantMessage];
+      });
+    } catch (error) {
+      const errorData = {
+        type: "error",
+        error: {
+          statusCode: error.response?.status || "Unknown",
+          message: error.response?.data?.detail || "Voice query failed",
+          details: error.response?.data?.detail || error.message || "",
+        },
+      };
+      setMessages((prev) => {
+        const updated = [...prev];
+        updated[0] = {
+          type: "user",
+          query: "Voice query",
+        };
+        return [...updated, errorData];
+      });
     } finally {
       setLoading(false);
     }
@@ -121,6 +255,15 @@ function Assistant() {
                 );
               }
 
+              if (msg.type === "error") {
+                return (
+                  <ErrorResponse
+                    key={index}
+                    error={msg.error}
+                  />
+                );
+              }
+
               return (
                 <AssistantResponse
                   key={index}
@@ -177,7 +320,12 @@ function Assistant() {
 
         </div>
 
-        <ChatInput onSubmit={submitQuery} disabled={loading} />
+        <ChatInput
+          onSubmit={submitQuery}
+          onVoiceSubmit={submitVoiceQuery}
+          onImageSubmit={submitImageQuery}
+          disabled={loading}
+        />
 
       </div>
 
