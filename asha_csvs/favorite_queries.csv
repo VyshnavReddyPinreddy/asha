@@ -1,0 +1,32 @@
+id,asha_id,query_name,generated_sql,created_at,is_system
+1,1,what is my area name ? ,"SELECT area_name 
+FROM health_area 
+WHERE area_id = 1;",2026-06-11 19:33:22.234312,f
+10,0,Pregnant women in my area,"SELECT p.person_id, p.first_name, p.last_name, p.phone_number, pr.lmp_date, pr.expected_delivery_date, pr.risk_category FROM pregnancy pr JOIN person p ON pr.mother_id = p.person_id JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND pr.pregnancy_status = 'ONGOING';",2026-06-11 21:31:42.043238,t
+12,0,High-risk pregnancies,"SELECT p.first_name, p.last_name, p.phone_number, pr.lmp_date, pr.expected_delivery_date, pr.risk_category FROM pregnancy pr JOIN person p ON pr.mother_id = p.person_id JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND pr.risk_category = 'HIGH_RISK' AND pr.pregnancy_status = 'ONGOING';",2026-06-11 21:31:42.043238,t
+14,0,Children under 5 years,"SELECT p.person_id, p.first_name, p.last_name, p.date_of_birth, p.gender FROM person p JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND p.status = 'ALIVE' AND EXTRACT(YEAR FROM AGE(CURRENT_DATE, p.date_of_birth)) < 5;",2026-06-11 21:31:42.043238,t
+15,1,"Recent births (last 30 days) , need their date of ...","SELECT p.date_of_birth, p.first_name, p.last_name, p.phone_number, 
+       br.birth_weight_kg, br.delivery_type, br.remarks
+FROM person p
+JOIN birth_record br ON p.person_id = br.child_id
+JOIN pregnancy pr ON br.pregnancy_id = pr.pregnancy_id
+JOIN family f ON pr.mother_id = f.family_id
+WHERE f.area_id = 1
+  AND p.date_of_birth >= NOW() - INTERVAL '30 days';",2026-06-11 21:32:44.666116,f
+13,0,Recent births (last 30 days),"SELECT p.person_id, p.first_name, p.last_name, br.birth_weight_kg, br.delivery_type, br.birth_id FROM birth_record br JOIN person p ON br.child_id = p.person_id JOIN family f ON p.family_id = f.family_id WHERE f.area_id = {area_id} AND br.birth_date >= CURRENT_DATE - INTERVAL '30 days';",2026-06-11 21:31:42.043238,t
+16,1,what is the sex ratio in my area ? ,"SELECT 
+  SUM(CASE WHEN p.gender = 'M' THEN 1 ELSE 0 END) AS male_count,
+  SUM(CASE WHEN p.gender = 'F' THEN 1 ELSE 0 END) AS female_count,
+  ROUND(SUM(CASE WHEN p.gender = 'M' THEN 1.0 ELSE 0 END) / 
+        SUM(CASE WHEN p.gender = 'F' THEN 1.0 ELSE 0 END), 2) AS sex_ratio
+FROM person p
+JOIN family f ON p.family_id = f.family_id
+WHERE f.area_id = 1 AND p.status = 'ALIVE';",2026-06-11 22:00:10.235051,f
+17,2,whats my area name,"SELECT area_name 
+FROM health_area 
+WHERE area_id = 2;",2026-06-11 22:14:26.302763,f
+18,1,what is my population count ? ,"SELECT COUNT(DISTINCT p.person_id) AS population_count
+FROM person p
+JOIN family f ON p.family_id = f.family_id
+WHERE f.area_id = 1
+  AND p.status = 'ALIVE';",2026-06-18 20:59:02.478047,f
