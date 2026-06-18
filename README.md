@@ -21,19 +21,12 @@ This system provides a user-friendly interface for ASHA workers to query their d
 ## Tech Stack
 
 **Frontend:**
-- React 19
-- Vite
 - Tailwind CSS
-- React Router
+- React
 - Axios
-- React Hook Form
-- Framer Motion
 
 **Backend:**
 - FastAPI
-- SQLAlchemy
-- Pydantic
-- Python 3.x
 
 ## Backend Setup
 
