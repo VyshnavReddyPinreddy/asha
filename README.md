@@ -89,6 +89,8 @@ This system provides a user-friendly interface for ASHA workers to query their d
    createdb -U postgres asha
    psql -U postgres -d asha -f schema.sql
    ```
+    Use the csv files for sample data to insert into the tables from the asha_csvs folder
+
 
 6. **Run the backend server**
    ```bash
