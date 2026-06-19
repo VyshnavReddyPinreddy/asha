@@ -48,7 +48,7 @@ async def login(payload: LoginRequest,response:Response,db:AsyncSession=Depends(
         value=access_token,
         httponly=True,
         secure=True,     # True in production HTTPS
-        samesite="lax",
+        samesite="none",
         max_age=60 * 60 * 24
     )
     return {
