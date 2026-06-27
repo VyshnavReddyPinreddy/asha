@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://asha-v26u.onrender.com/$1"
+    }
+  ]
+}
