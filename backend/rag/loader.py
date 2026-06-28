@@ -17,7 +17,7 @@ def load_all_documents(pdf_dir : str = "data/pdfs", ocr_dir : str = "data/ocr_te
     ocr_path = Path(ocr_dir)
 
     pdf_files = list(pdf_path.glob("**/*.pdf"))
-    print(f"Found len{pdf_files} PDFs, skipping {len{SCANNED_PDFS}} scanned ones")
+    print(f"Found {len(pdf_files)} PDFs, skipping {len(SCANNED_PDFS)} scanned ones")
 
     for pdf_file in pdf_files:
         if pdf_file.name in SCANNED_PDFS:

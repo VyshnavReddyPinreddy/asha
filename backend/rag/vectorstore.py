@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from pathlib import Path
 from typing import List,Any 
 
-EMBED_MODEL = "all-mpnet-base-v2"
+EMBED_MODEL = "all-MiniLM-L6-v2"
 VECTOR_STORE_PATH = "data/vector_store"
 COLLECTION_NAME = "asha_documents"
 
