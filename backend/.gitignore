@@ -31,3 +31,9 @@ Thumbs.db
 
 generator/
 debug_audio/
+
+data/pdfs/
+
+test_rag.py
+audit_pdfs.py
+ocr_scanned.py

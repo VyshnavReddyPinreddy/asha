@@ -7,7 +7,7 @@ import {
 
 import { useState, useRef, useEffect } from "react";
 
-function ChatInput({ onSubmit, disabled, onVoiceSubmit, onImageSubmit }) {
+function ChatInput({ onSubmit, disabled, onVoiceSubmit, onImageSubmit,mode="data"}) {
 
   const [query, setQuery] = useState("");
   const [isRecording, setIsRecording] = useState(false);
@@ -226,7 +226,7 @@ function ChatInput({ onSubmit, disabled, onVoiceSubmit, onImageSubmit }) {
             onKeyDown={(e) =>
               e.key === "Enter" && !disabled && !isRecording && send()
             }
-            placeholder="Ask anything"
+            placeholder={mode === "knowledge" ? "Ask about health protocols..." : "Ask about your village data..."}
             disabled={disabled || isRecording}
             className="
               flex-1

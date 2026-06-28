@@ -1,0 +1,128 @@
+
+
+--- Page 1 ---
+INDIAN ACADEMY OF PEDIATRICS
+
+Age
+Birth
+
+6 week
+
+10 week
+
+14 week
+
+6 month
+
+7 month
+
+6-9 month
+
+9 month
+
+12 month
+
+15 month
+16-18 month
+18-19 month
+4-6 year
+10-12 year
+
+Vaccine
+
+BCG
+
+OPV
+
+Hepatitis B-1 (BD)
+DTwP/DTaP-1
+
+IPV-1
+
+Hib-1
+
+Hep B-2
+
+Rotavirus-|
+
+PCV-1
+
+DTwP/DTaP-2
+
+IPV-2
+
+Hib-2
+
+Hep B-3
+
+Rotavirus-2
+
+PCV-2
+
+DTwP/DTaP-3
+
+IPV-3
+
+Hib-3
+
+Hep B-4
+
+Rotavirus-3
+
+PCV-3
+
+Influenza (ITV)-1
+Influenza (IIV)-2
+
+Typhoid conjugate vaccine
+MMR -1
+
+Hepatitis A
+
+MMR-2, Varicella -1, PCV booster
+DTwP/DTaP-B1, Hib-B1, IPV-B1
+Hep A-2, Varicella-2
+DTwP/DTaP-B2, IPV-B2, MMR-3
+Tdap, HPV
+
+Age in completed weeks/months/vears.
+
+VACCINES AND IMMUNIZATION PRACTICES
+
+Table I [AP Immunization Timetable 2020/21: [AP Recommended Vaccines for Routine Use
+
+Comments
+
+BCG: before discharge
+
+OPV: as soon as possible after birth
+
+Hep B should be administered within 24 hours of birth
+
+DTwP or DTaP may be administered in primary immunization
+IPV: 6-10-14 weeks is the recommended schedule. If IPV,
+
+as part ofa hexavalent combination vaccine, is unaffordable,
+the infant should be sent to a government facility for primary
+immunization as per UIP schedule.
+
+RV 1: 2 -dose schedule; all other rotavirus brands: 3-dose schedule
+
+An additional 4th dose of Hep B vaccine is safe and is permitted as
+a component of a combination vaccine
+
+Uniform dose of 0.5 ml for DCGI approved brands
+To be repeated every year, in pre-monsoon period, till 5 y ofage
+
+As of available data, there is no recommendation for a booster dose
+
+Single dose for live attenuated vaccine
+
+Only for inactivated Hep A vaccine
+
+Tdap is to be administered even if it has been administered earlier
+(as DTP-B2)
+
+HPV: 2 doses at 6 mo interval between 9-14 y; 3 doses: from 15 y or
+immunocompromised of any age (0-1-6 mo for HP V2, 0-2-6 mo for
+HPV4)
