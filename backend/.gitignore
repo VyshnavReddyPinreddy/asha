@@ -33,6 +33,7 @@ generator/
 debug_audio/
 
 data/pdfs/
+/rag/data/
 
 test_rag.py
 audit_pdfs.py
