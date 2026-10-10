@@ -201,7 +201,7 @@ class ChatRequest(BaseModel):
     query : str 
 
 @router.post("/")
-async def chat(payload : ChatRequest):
+async def chat(payload : ChatRequest,current_user: dict = Depends(get_current_user)):
     answer = ask_llm(payload.query)
     return {
         "query" : payload.query,
