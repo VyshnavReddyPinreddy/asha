@@ -104,6 +104,12 @@ async def nl_to_sql_query(
     role : str = current_user.get("role","")
     asha_id : int | None = current_user.get("asha_id")
 
+    if role not in ("ASHA","ANM","ADMIN") : 
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail = "Your account role is not allowed to run queries.",
+        )
+
     area_id : int | None = None 
 
     if role == "ASHA" : 
@@ -128,74 +134,74 @@ async def nl_to_sql_query(
         
         area_id = row["area_id"]
 
-        logger.info(
-            "NL query from user_id=%s role=%s asha_id=%s: %s",
+    logger.info(
+        "NL query from user_id=%s role=%s asha_id=%s: %s",
+        current_user.get("user_id"),
+        role,
+        asha_id,
+        payload.query,
+    )
+
+    try:
+        generated_sql = generate_sql(
+            natural_language_query=payload.query,
+            area_id = area_id 
+        )
+    except Exception as e : 
+        logger.error("LLM generation failed : %s", e)
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail = "SQL generation failed. Please try rephrasing your question.",
+        )
+    
+    logger.info("Generated SQL : %s",generated_sql)
+
+    is_safe,reason = _is_safe_sql(generated_sql)
+    if not  is_safe : 
+        logger.warning(
+            "Unsafe SQL blocked for user_id=%s: %s | reason: %s",
             current_user.get("user_id"),
-            role,
-            asha_id,
-            payload.query,
+            generated_sql,
+            reason,
         )
-
-        try:
-            generated_sql = generate_sql(
-                natural_language_query=payload.query,
-                area_id = area_id 
-            )
-        except Exception as e : 
-            logger.error("LLM generation failed : %s", e)
-            raise HTTPException(
-                status_code=status.HTTP_502_BAD_GATEWAY,
-                detail = "SQL generation failed. Please try rephrasing your question.",
-            )
-        
-        logger.info("Generated SQL : %s",generated_sql)
-
-        is_safe,reason = _is_safe_sql(generated_sql)
-        if not  is_safe : 
-            logger.warning(
-                "Unsafe SQL blocked for user_id=%s: %s | reason: %s",
-                current_user.get("user_id"),
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Query blocked: {reason} ASHA users can only read data.",
+        )
+    
+    if role=="ASHA" and area_id is not None : 
+        if str(area_id) not in generated_sql : 
+            logger.error(
+                "LLM generated SQL without area scope for asha_id=%s. SQL: %s",
+                asha_id,
                 generated_sql,
-                reason,
             )
             raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"Query blocked: {reason} ASHA users can only read data.",
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=(
+                    "Could not generate a properly scoped query for your area. "
+                    "Please rephrase your question."
+                ),
             )
         
-        if role=="ASHA" and area_id is not None : 
-            if str(area_id) not in generated_sql : 
-                logger.error(
-                    "LLM generated SQL without area scope for asha_id=%s. SQL: %s",
-                    asha_id,
-                    generated_sql,
-                )
-                raise HTTPException(
-                    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    detail=(
-                        "Could not generate a properly scoped query for your area. "
-                        "Please rephrase your question."
-                    ),
-                )
-            
-        try :
-            result = await db.execute(text(generated_sql))
-            rows = result.mappings().all()
-            results = [dict(row) for row in rows]
-            results = _convert_results_age(results)
-        except Exception as e :
-            logger.error("SQL execution error: %s | SQL: %s", e, generated_sql)
-            raise HTTPException(
-                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail=f"Query execution failed: {str(e)}",
-            )
-        
-        return QueryResponse(
-            natual_language_query=payload.query,
-            generated_sql=generated_sql,
-            row_count=len(results),
-            results = results,
+    try :
+        result = await db.execute(text(generated_sql))
+        rows = result.mappings().all()
+        results = [dict(row) for row in rows]
+        results = _convert_results_age(results)
+    except Exception as e :
+        logger.error("SQL execution error: %s | SQL: %s", e, generated_sql)
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=f"Query execution failed: {str(e)}",
         )
+    
+    return QueryResponse(
+        natual_language_query=payload.query,
+        generated_sql=generated_sql,
+        row_count=len(results),
+        results = results,
+    )
 
 class ChatRequest(BaseModel):
     query : str 
