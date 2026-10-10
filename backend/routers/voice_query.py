@@ -88,7 +88,6 @@ _MAX_AUDIO_BYTES = 25 * 1024 * 1024  # Groq's 25 MB limit
 _MAX_IMAGE_BYTES = 10 * 1024 * 1024  # 10 MB limit for images
 
 
-
 class VoiceQueryResponse(BaseModel):
     transcribed_text: str
     generated_sql: str
@@ -103,18 +102,12 @@ class ImageQueryResponse(BaseModel):
     results: list[dict]
 
 
-
 @router.post("/voice-query", response_model=VoiceQueryResponse)
 async def voice_query(
     audio: UploadFile = File(..., description="Audio file in Telugu, Hindi, or English"),
     current_user: dict = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    """
-    Pipeline:
-      audio file  →  Groq Whisper (translate → English)  →  generate_sql()  →  execute  →  results
-    """
-
     content_type = (audio.content_type or "").lower()
 
     base_content_type = content_type.split(';')[0].strip()
@@ -277,11 +270,6 @@ async def image_query(
     current_user: dict = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    """
-    Pipeline:
-      image file  →  EasyOCR (extract text)  →  generate_sql()  →  execute  →  results
-    """
-
     content_type = (image.content_type or "").lower()
 
     base_content_type = content_type.split(';')[0].strip()

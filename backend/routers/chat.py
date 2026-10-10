@@ -202,9 +202,7 @@ class ChatRequest(BaseModel):
 
 @router.post("/")
 async def chat(payload : ChatRequest):
-
     answer = ask_llm(payload.query)
-
     return {
         "query" : payload.query,
         "answer" : answer 

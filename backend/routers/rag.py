@@ -13,7 +13,6 @@ class KnowledgeQueryResponse(BaseModel):
     answer: str
     sources: list[str]
 
-# Singleton — loaded once when server starts
 _store = None
 _retriever = None
 

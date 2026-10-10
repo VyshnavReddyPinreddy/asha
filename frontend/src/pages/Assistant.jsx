@@ -86,7 +86,10 @@ function Assistant() {
   };
 
   const submitImageQuery = async (imageFile) => {
-    const userMessage = { type: "user", query: "Processing image query..." };
+    const userMessage = {
+      type: "user",
+      query: "Processing image query...",
+    };
     setMessages([userMessage]);
     setLoading(true);
 

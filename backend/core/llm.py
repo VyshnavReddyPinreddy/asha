@@ -7,7 +7,7 @@ client = Groq(
 
 def ask_llm(prompt : str) -> str : 
     response = client.chat.completions.create(
-        model = "llama-3.3-70b-versatile",
+        model = "openai/gpt-oss-20b",
         messages=[
             {
                 "role" : "system",
@@ -253,7 +253,7 @@ def generate_sql(natural_language_query : str, area_id : int | None) -> str :
         )
     
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-20b",
         messages=[
             {"role": "system", "content": system},
             {"role": "user", "content": natural_language_query},
